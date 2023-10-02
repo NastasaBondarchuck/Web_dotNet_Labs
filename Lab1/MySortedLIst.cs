@@ -25,6 +25,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
     public T GetByIndex(int index)
     {
+        if (Count is 0) throw new Exception("SortedList is empty!");
         if (index < 0) throw new IndexOutOfRangeException("Index must not be less than 0!");
         if (index >= Count) throw new IndexOutOfRangeException("Index must not be greater than SortedList Count!");
         if (index is 0) return _head!.Data;
@@ -127,6 +128,28 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
 
         return false;
+    }
+
+    public bool RemoveByIndex(int index)
+    {
+        if (Count is 0) throw new Exception("SortedList is empty!");
+        if (index < 0) throw new IndexOutOfRangeException("Index must not be less than 0!");
+        if (index >= Count) throw new IndexOutOfRangeException("Index must not be greater than SortedList Count!");
+        if (index is 0)
+        {
+            _head = _head!.Next;
+            return true;
+        }
+
+        Node<T>? previous = null;
+        Node<T>? current = _head;
+        for (int i = 0; i < index; i++)
+        {
+            previous = current;
+            current = current!.Next;
+        }
+        RemoveNode(current!, previous);
+        return true;
     }
     private void RemoveNode(Node<T> current, Node<T>? previous)
     {
