@@ -7,9 +7,24 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 {
     public Node<T>? Head;
     public int Count { get; private set; }
-    
     public bool IsReadOnly => false;
 
+    public T[] GetValues()
+    {
+        if (Count is 0)
+        {
+            throw new Exception("SortedList is empty!");
+        }
+        T[] array = new T[Count];
+        Node<T>? current = Head;
+        for (int i = 0; i < Count; i++)
+        {
+            array[i] = current!.Data;
+            current = current.Next;
+        }
+
+        return array;
+    }
     public void Add(T item)
     {
         Node<T> node = new Node<T>(item);
@@ -26,7 +41,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
         Count++;
     }
-
     private Node<T>? FindPlace(Node<T> node)
     {
         if (Count is 0)
@@ -53,6 +67,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         if (array.Length - arrayIndex < Count) throw new IndexOutOfRangeException("SortedList contains more elements than Array might contain!");
         if (arrayIndex < 0) throw new IndexOutOfRangeException("ArrayIndex must not be less than 0!");
         if (array.Rank != 1) throw new ArgumentException("Array must be one-dimensional!");
+
 
         Node<T>? current = Head;
         for (int i = 0; i < Count; i++)
@@ -81,7 +96,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         return false;
     }
-
     public bool Remove(T item)
     {
         if (Contains(item))
@@ -103,7 +117,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         return false;
     }
-
     private void RemoveNode(Node<T> current, Node<T>? previous)
     {
         if (previous is not null)
@@ -115,13 +128,10 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
             Head = current.Next;
         }
     }
-    
-    
     public IEnumerator<T> GetEnumerator()
     {
         return new MyEnumerator(this);
     }
-    
     private class MyEnumerator : IEnumerator<T>
     {
         public T Current { get; } = default!;
@@ -155,7 +165,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         public void Dispose() { }
     }
-
     IEnumerator IEnumerable.GetEnumerator()
     {
         return GetEnumerator();
