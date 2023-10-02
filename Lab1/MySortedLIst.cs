@@ -1,12 +1,67 @@
 using System.Collections;
+using System.Net;
 
 namespace Lab1;
 
-public class MySortedList<T> : IEnumerable<T> where T : IComparable 
+public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : IComparable 
 {
     public Node<T>? Head;
-    public int Count;
+    public int Count { get; set; }
+    public bool IsReadOnly { get; }
     
+    public void Add(T item)
+    {
+        Node<T> node = new Node<T>(item);
+        Node<T>? previous = FindPlace(node);
+        if (previous is not null)
+        {
+            Node<T>? next = previous.Next;
+            previous.Next = node;
+            node.Next = next;
+        }
+        else
+        {
+            Head = node;
+        }
+        Count++;
+    }
+
+    private Node<T>? FindPlace(Node<T> node)
+    {
+        return;
+    }
+
+    public void Clear()
+    {
+        
+    }
+
+    public bool Contains(T item)
+    {
+        Node<T>? current = Head;
+        for (int i = 0; i < Count; i++)
+        {
+            if (current!.Data.Equals(item))
+            {
+                return true;
+            }
+
+            current = current.Next;
+        }
+
+        return false;
+    }
+
+    public void CopyTo(T[] array, int arrayIndex)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool Remove(T item)
+    {
+        throw new NotImplementedException();
+    }
+
     
     
     public IEnumerator<T> GetEnumerator()
@@ -52,4 +107,5 @@ public class MySortedList<T> : IEnumerable<T> where T : IComparable
     {
         return GetEnumerator();
     }
+
 }
