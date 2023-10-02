@@ -6,10 +6,10 @@ namespace Lab1;
 public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : IComparable 
 {
     public Node<T>? Head;
-    public int Count { get; set; }
+    public int Count { get; private set; }
     
-    public bool IsReadOnly { get; }
-    
+    public bool IsReadOnly => false;
+
     public void Add(T item)
     {
         Node<T> node = new Node<T>(item);
@@ -29,15 +29,43 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
     private Node<T>? FindPlace(Node<T> node)
     {
-        return;
-    }
+        if (Count is 0)
+        {
+            return null;
+        }
+        Node<T>? previous = null;
+        Node<T>? current = Head;
+        for (int i = 0; i < Count; i++)
+        {
+            if (node.Data.CompareTo(current!.Data) >= 0)
+            {
+                return previous;
+            }
 
+            previous = current;
+            current = current.Next;
+        }
+
+        return previous;
+    }
+    public void CopyTo(T[] array, int arrayIndex)
+    {
+        if (array.Length - arrayIndex < Count) throw new IndexOutOfRangeException("SortedList contains more elements than Array might contain!");
+        if (arrayIndex < 0) throw new IndexOutOfRangeException("ArrayIndex must not be less than 0!");
+        if (array.Rank != 1) throw new ArgumentException("Array must be one-dimensional!");
+
+        Node<T>? current = Head;
+        for (int i = 0; i < Count; i++)
+        {
+            array[i + arrayIndex] = current!.Data;
+            current = current.Next;
+        }
+    }
     public void Clear()
     {
         Head = null;
         Count = 0;
     }
-
     public bool Contains(T item)
     {
         Node<T>? current = Head;
@@ -52,11 +80,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
 
         return false;
-    }
-
-    public void CopyTo(T[] array, int arrayIndex)
-    {
-        
     }
 
     public bool Remove(T item)
@@ -101,7 +124,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     
     private class MyEnumerator : IEnumerator<T>
     {
-        public T? Current { get; }
+        public T Current { get; } = default!;
         object? IEnumerator.Current => _current;
         
         private readonly MySortedList<T> _list;
