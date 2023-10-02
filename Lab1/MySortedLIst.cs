@@ -7,6 +7,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 {
     public Node<T>? Head;
     public int Count { get; set; }
+    
     public bool IsReadOnly { get; }
     
     public void Add(T item)
@@ -33,7 +34,8 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
     public void Clear()
     {
-        
+        Head = null;
+        Count = 0;
     }
 
     public bool Contains(T item)
@@ -54,14 +56,42 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
     public void CopyTo(T[] array, int arrayIndex)
     {
-        throw new NotImplementedException();
+        
     }
 
     public bool Remove(T item)
     {
-        throw new NotImplementedException();
+        if (Contains(item))
+        {
+            Node<T>? previous = null;
+            Node<T>? current = Head;
+            for (int i = 0; i < Count; i++)
+            {
+                if (current!.Data.Equals(item))
+                {
+                    RemoveNode(current, previous);
+                    Count--;
+                    return true;
+                }
+                previous = current;
+                current = current.Next;
+            }
+        }
+
+        return false;
     }
 
+    private void RemoveNode(Node<T> current, Node<T>? previous)
+    {
+        if (previous is not null)
+        {
+            previous.Next = current.Next;
+        }
+        else
+        {
+            Head = current.Next;
+        }
+    }
     
     
     public IEnumerator<T> GetEnumerator()
