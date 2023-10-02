@@ -5,18 +5,15 @@ namespace Lab1;
 
 public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : IComparable 
 {
-    public Node<T>? Head;
+    private Node<T>? _head;
     public int Count { get; private set; }
     public bool IsReadOnly => false;
 
     public T[] GetValues()
     {
-        if (Count is 0)
-        {
-            throw new Exception("SortedList is empty!");
-        }
+        if (Count is 0) throw new Exception("SortedList is empty!");
         T[] array = new T[Count];
-        Node<T>? current = Head;
+        Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
         {
             array[i] = current!.Data;
@@ -24,6 +21,20 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
 
         return array;
+    }
+
+    public T GetByIndex(int index)
+    {
+        if (index < 0) throw new IndexOutOfRangeException("Index must not be less than 0!");
+        if (index >= Count) throw new IndexOutOfRangeException("Index must not be greater than SortedList Count!");
+        if (index is 0) return _head!.Data;
+        Node<T> current = _head!;
+        for (int i = 0; i < index; i++)
+        {
+            current = current.Next!;
+        }
+
+        return current.Data;
     }
     public void Add(T item)
     {
@@ -37,7 +48,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
         else
         {
-            Head = node;
+            _head = node;
         }
         Count++;
     }
@@ -48,7 +59,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
             return null;
         }
         Node<T>? previous = null;
-        Node<T>? current = Head;
+        Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
         {
             if (node.Data.CompareTo(current!.Data) >= 0)
@@ -69,7 +80,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         if (array.Rank != 1) throw new ArgumentException("Array must be one-dimensional!");
 
 
-        Node<T>? current = Head;
+        Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
         {
             array[i + arrayIndex] = current!.Data;
@@ -78,12 +89,12 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     }
     public void Clear()
     {
-        Head = null;
+        _head = null;
         Count = 0;
     }
     public bool Contains(T item)
     {
-        Node<T>? current = Head;
+        Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
         {
             if (current!.Data.Equals(item))
@@ -101,7 +112,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         if (Contains(item))
         {
             Node<T>? previous = null;
-            Node<T>? current = Head;
+            Node<T>? current = _head;
             for (int i = 0; i < Count; i++)
             {
                 if (current!.Data.Equals(item))
@@ -125,7 +136,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
         else
         {
-            Head = current.Next;
+            _head = current.Next;
         }
     }
     public IEnumerator<T> GetEnumerator()
@@ -143,7 +154,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         public MyEnumerator(MySortedList<T> list)
         {
             _list = list;
-            if (_list.Head != null) _current = _list.Head;
+            if (_list._head != null) _current = _list._head;
         }
         
         public bool MoveNext()
@@ -159,7 +170,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         public void Reset()
         {
-            _current = _list.Head;
+            _current = _list._head;
         }
 
 
