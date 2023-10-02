@@ -22,7 +22,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         return array;
     }
-
     public T GetByIndex(int index)
     {
         if (Count is 0) throw new Exception("SortedList is empty!");
@@ -55,10 +54,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     }
     private Node<T>? FindPlace(Node<T> node)
     {
-        if (Count is 0)
-        {
-            return null;
-        }
+        if (Count is 0) return null;
         Node<T>? previous = null;
         Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
@@ -79,8 +75,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         if (array.Length - arrayIndex < Count) throw new IndexOutOfRangeException("SortedList contains more elements than Array might contain!");
         if (arrayIndex < 0) throw new IndexOutOfRangeException("ArrayIndex must not be less than 0!");
         if (array.Rank != 1) throw new ArgumentException("Array must be one-dimensional!");
-
-
+        if (Count is 0) return;
         Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
         {
@@ -95,16 +90,19 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     }
     public bool Contains(T item)
     {
-        Node<T>? current = _head;
-        for (int i = 0; i < Count; i++)
+        if (Count > 0)
         {
-            if (current!.Data.Equals(item))
+            Node<T>? current = _head;
+            for (int i = 0; i < Count; i++)
             {
-                return true;
-            }
+                if (current!.Data.Equals(item))
+                {
+                    return true;
+                }
 
-            current = current.Next;
-        }
+                current = current.Next;
+            }
+        } 
 
         return false;
     }
@@ -129,7 +127,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         return false;
     }
-
     public bool RemoveByIndex(int index)
     {
         if (Count is 0) throw new Exception("SortedList is empty!");
