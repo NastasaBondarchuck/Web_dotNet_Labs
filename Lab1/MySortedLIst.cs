@@ -3,7 +3,7 @@ using System.Net;
 
 namespace Lab1;
 
-public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : IComparable 
+public class MySortedList<T> : ICollection<T> where T : IComparable 
 {
     private Node<T>? _head;
     public int Count { get; private set; }
