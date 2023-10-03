@@ -196,7 +196,7 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
     private class MyEnumerator : IEnumerator<T>
     {
         public T Current => _current!.Data;
-        object? IEnumerator.Current => _current!.Data;
+        object IEnumerator.Current => _current!.Data;
         
         private static Node<T>? _current;
         private static Node<T>? _next; 
