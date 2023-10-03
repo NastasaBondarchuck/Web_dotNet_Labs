@@ -22,7 +22,6 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         return array;
     }
-
     public List<T> GetValuesList()
     {
         if (Count is 0) throw new Exception("SortedList is empty!");
@@ -49,6 +48,19 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
 
         return current.Data;
+    }
+    public int GetIndexOf(T item)
+    {
+        if (Contains(item))
+        {
+            Node<T>? current = _head;
+            for (int i = 0; i < Count; i++)
+            {
+                if (current!.Data.Equals(item)) return i;
+                current = current.Next;
+            }
+        }
+        throw new Exception("There is no element in the SortedList equal to your value!");
     }
     public void Add(T item)
     {
@@ -109,11 +121,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
             Node<T>? current = _head;
             for (int i = 0; i < Count; i++)
             {
-                if (current!.Data.Equals(item))
-                {
-                    return true;
-                }
-
+                if (current!.Data.Equals(item)) return true;
                 current = current.Next;
             }
         } 
