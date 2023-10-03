@@ -189,26 +189,31 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     }
     private class MyEnumerator : IEnumerator<T>
     {
-        public T Current { get; } = default!;
-        object? IEnumerator.Current => _current;
+        public T Current => _current.Data;
+        object? IEnumerator.Current => _current.Data;
         
+        private static Node<T>? _current;
+        private static Node<T>? _next; 
         private readonly MySortedList<T> _list;
-        private Node<T>? _current; 
+        private int _counter;
         
         public MyEnumerator(MySortedList<T> list)
         {
             _list = list;
-            if (_list._head != null) _current = _list._head;
+            if (_list._head != null) _next = _list._head;
+            _counter = 0;
         }
         
         public bool MoveNext()
         {
-            if (_current?.Next is null)
+            if (_counter > _list.Count - 1)
             {
                 return false;
             }
 
-            _current = _current.Next;
+            _current = _next;
+            _counter++;
+            _next = _current.Next;
             return true;
         }
 
