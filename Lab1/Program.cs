@@ -41,17 +41,19 @@ internal class Program
         Console.ReadLine();
     }
 
-    public static void Print(List<int> list, string message)
+    private static void Print(List<int> list, string message)
     {
         Console.WriteLine($"\n{message}");
         foreach (var item in list) Console.Write($"{item}  ");
     }
-    public static void Print(int[] array, string message)
+
+    private static void Print(int[] array, string message)
     {
         Console.WriteLine($"\n{message}");
         foreach (var item in array)  Console.Write($"{item}  ");
-    }    
-    public static void Print(MySortedList<int> sortedList, string message)
+    }
+
+    private static void Print(MySortedList<int> sortedList, string message)
     {
         Console.WriteLine($"\n{message}");
         foreach (var item in sortedList)  Console.Write($"{item}  ");
