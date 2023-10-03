@@ -170,6 +170,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
             current = current!.Next;
         }
         RemoveNode(current!, previous);
+        Count--;
         return true;
     }
     private void RemoveNode(Node<T> current, Node<T>? previous)
@@ -189,8 +190,8 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     }
     private class MyEnumerator : IEnumerator<T>
     {
-        public T Current => _current.Data;
-        object? IEnumerator.Current => _current.Data;
+        public T Current => _current!.Data;
+        object? IEnumerator.Current => _current!.Data;
         
         private static Node<T>? _current;
         private static Node<T>? _next; 
@@ -213,7 +214,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
             _current = _next;
             _counter++;
-            _next = _current.Next;
+            _next = _current!.Next;
             return true;
         }
 
