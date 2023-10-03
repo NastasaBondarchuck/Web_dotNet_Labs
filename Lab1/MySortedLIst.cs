@@ -151,6 +151,12 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
 
         return false;
     }
+    public bool RemoveAll(T item)
+    {
+        if (!Contains(item)) return false;
+        while (Contains(item)) Remove(item);
+        return false;
+    }
     public bool RemoveByIndex(int index)
     {
         if (Count is 0) throw new Exception("SortedList is empty!");
