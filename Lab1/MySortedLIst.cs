@@ -74,7 +74,9 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
         else
         {
+            node.Next = _head;
             _head = node;
+            
         }
         Count++;
     }
@@ -85,7 +87,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
         {
-            if (node.Data.CompareTo(current!.Data) >= 0)
+            if (node.Data.CompareTo(current!.Data) < 0)
             {
                 return previous;
             }
