@@ -9,7 +9,7 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
     public int Count { get; private set; }
     public bool IsReadOnly => false;
 
-    public T[] GetValues()
+    public T[] GetValuesArray()
     {
         if (Count is 0) throw new Exception("SortedList is empty!");
         T[] array = new T[Count];
@@ -21,6 +21,20 @@ public class MySortedList<T> : IEnumerable<T>, ICollection<T> where T : ICompara
         }
 
         return array;
+    }
+
+    public List<T> GetValuesList()
+    {
+        if (Count is 0) throw new Exception("SortedList is empty!");
+        List<T> list = new List<T>();
+        Node<T> current = _head!;
+        for (int i = 0; i < Count; i++)
+        {
+            list.Add(current.Data);
+            current = current.Next!;
+        }
+
+        return list;
     }
     public T GetByIndex(int index)
     {
