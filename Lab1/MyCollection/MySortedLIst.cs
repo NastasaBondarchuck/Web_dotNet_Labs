@@ -201,7 +201,6 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
         object IEnumerator.Current => _current!.Data;
         
         private static Node<T>? _current;
-        // private static Node<T>? _next; 
         private readonly MySortedList<T> _list;
         private int _counter;
         
@@ -221,7 +220,6 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
 
             _current = _current!.Next;
             _counter++;
-            // _next = _current!.Next;
             return true;
         }
 
