@@ -4,10 +4,17 @@ internal class Program
     static void Main(string[] args)
     {
         MySortedList<int> sortedList = new MySortedList<int>();
-        List<int> list = new List<int>() {1, 19, 33, 12, 0, -9, 18};
+        
+        sortedList.CountIncrease += sender => sender.Count++;
+        sortedList.CountDecrease += sender => sender.Count--;
+        
+        List<int> list = new List<int> {1, 19, 33, 12, 0, -9, 18};
+        
         Print(list, "List with base values:");
         foreach (var number in list) sortedList.Add(number);
         Print(sortedList, "Base SortedList:");
+        Console.WriteLine($"\nSortedList Count:{sortedList.Count}");
+        
         sortedList.Add(4);
         Print(sortedList, "SortedList after adding item 4:");
         sortedList.Add(-15);
@@ -18,12 +25,16 @@ internal class Program
         Print(sortedList, "SortedList after removing item 1:");
         sortedList.RemoveByIndex(5);
         Print(sortedList, "SortedList after removing item by index 5:");
+        Console.WriteLine($"\nSortedList Count:{sortedList.Count}");
+        
         int index = sortedList.GetIndexOf(19);
         int value = sortedList.GetByIndex(index);
-        Console.WriteLine($"\nIndex: {index}, Value: {value}");
+        Console.WriteLine($"\n\nIndex: {index}, Value: {value}");
+        
         Console.WriteLine($"\nSortedList contains item 45: {sortedList.Contains(45)}");
         Console.WriteLine($"SortedList contains item 19: {sortedList.Contains(19)}");
         sortedList.RemoveAll(19);
+        
         Print(sortedList, "SortedList after removing all items equal 19:");
         Console.WriteLine($"\nSortedList Count:{sortedList.Count}");
         int[] arr = new int[15];
@@ -57,4 +68,5 @@ internal class Program
         Console.WriteLine($"\n{message}");
         foreach (var item in sortedList)  Console.Write($"{item}  ");
     }
+    
 }
