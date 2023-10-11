@@ -1,11 +1,15 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 namespace Lab1;
 
-public class MySortedList<T> : ICollection<T> where T : IComparable 
+public class MySortedList<T> : ICollection<T> where T : IComparable
 {
+    public delegate void EventHandler(MySortedList<T> sender);
+    public event EventHandler? CountIncrease;
+    public event EventHandler? CountDecrease;
     private Node<T>? _head;
-    public int Count { get; private set; }
+    public int Count { get; set; }
     public bool IsReadOnly => false;
 
     public T[] GetValuesArray()
@@ -77,7 +81,7 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
             _head = node;
             
         }
-        Count++;
+        CountIncrease?.Invoke(this);
     }
     private Node<T>? FindPlace(Node<T> node)
     {
@@ -131,21 +135,20 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
     }
     public bool Remove(T item)
     {
-        if (Contains(item))
+        if (!Contains(item)) return false;
+        Node<T>? previous = null;
+        Node<T>? current = _head;
+        for (int i = 0; i < Count; i++)
+                
         {
-            Node<T>? previous = null;
-            Node<T>? current = _head;
-            for (int i = 0; i < Count; i++)
+            if (current!.Data.Equals(item))
             {
-                if (current!.Data.Equals(item))
-                {
-                    RemoveNode(current, previous);
-                    Count--;
-                    return true;
-                }
-                previous = current;
-                current = current.Next;
+                RemoveNode(current, previous);
+                CountDecrease?.Invoke(this);
+                return true;
             }
+            previous = current;
+            current = current.Next;
         }
 
         return false;
@@ -175,7 +178,7 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
             current = current!.Next;
         }
         RemoveNode(current!, previous);
-        Count--;
+        CountDecrease?.Invoke(this);
         return true;
     }
     private void RemoveNode(Node<T> current, Node<T>? previous)
@@ -199,27 +202,27 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
         object IEnumerator.Current => _current!.Data;
         
         private static Node<T>? _current;
-        private static Node<T>? _next; 
+        // private static Node<T>? _next; 
         private readonly MySortedList<T> _list;
         private int _counter;
         
         public MyEnumerator(MySortedList<T> list)
         {
             _list = list;
-            if (_list._head != null) _next = _list._head;
+            if (_list._head != null) _current = _list._head;
             _counter = 0;
         }
         
         public bool MoveNext()
         {
-            if (_counter > _list.Count - 1)
+            if (_counter >= _list.Count - 1)
             {
                 return false;
             }
 
-            _current = _next;
+            _current = _current!.Next;
             _counter++;
-            _next = _current!.Next;
+            // _next = _current!.Next;
             return true;
         }
 
