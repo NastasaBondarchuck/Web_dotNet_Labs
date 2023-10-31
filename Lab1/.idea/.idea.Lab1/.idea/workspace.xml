@@ -9,9 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9a718cc4-7e0f-4345-b069-962023880522" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionGetIndexOfTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionGetIndexOfTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionRemoveTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionRemoveTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyCollection/MySortedLIst.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection/MySortedLIst.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +39,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a6b1457cbcf17db31a383ba49ef9bcc786cf3ef77146d997eee499b27a46d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dd85d1af76a544e1a8083607f687e374b1d8a0/_14c09/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dd85d1af76a544e1a8083607f687e374b1d8a0/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionContainsTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionContainsTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionGetValuesArrayTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionGetEnumeratorTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionGetEnumeratorTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionGetIndexOfTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionGetIndexOfTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionRemoveTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionRemoveTests.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -142,62 +131,8 @@
       <workItem from="1698655085265" duration="604000" />
       <workItem from="1698687193056" duration="689000" />
       <workItem from="1698742939133" duration="18993000" />
-    </task>
-    <task id="LOCAL-00003" summary="Started creating class MySortedList, wrote MyEnumerator.">
-      <option name="closed" value="true" />
-      <created>1696247646578</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1696247646578</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added null-value for property Next by default.">
-      <option name="closed" value="true" />
-      <created>1696248208311</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1696248208311</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Implemented methods Contains and Add (without FindPlace).">
-      <option name="closed" value="true" />
-      <created>1696251297137</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1696251297137</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Implemented methods Remove and RemoveNode(auxiliary method).">
-      <option name="closed" value="true" />
-      <created>1696263064643</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1696263064643</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Implemented CopyTo method; update properties Count and IsReadOnly.">
-      <option name="closed" value="true" />
-      <created>1696272931034</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1696272931034</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Added GetValues method.">
-      <option name="closed" value="true" />
-      <created>1696273912958</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1696273912958</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added GetByIndex method; renamed field Head to _head, made it private.">
-      <option name="closed" value="true" />
-      <created>1696274788334</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1696274788334</updated>
+      <workItem from="1698770698441" duration="7849000" />
+      <workItem from="1698779770364" duration="325000" />
     </task>
     <task id="LOCAL-00010" summary="Added method RemoveByIndex; added one more check to the method GetByIndex.">
       <option name="closed" value="true" />
@@ -535,7 +470,63 @@
       <option name="project" value="LOCAL" />
       <updated>1698760019989</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Added MyCollectionIsReadOnlyTests.">
+      <option name="closed" value="true" />
+      <created>1698774722678</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1698774722678</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Renamed myEnumerator to enumerator in GetEnumerator_EmptySortedList_ReturnMoveNextFalseCurrentDefault method;&#10;Added GetEnumerator_ResetInNotEmptySortedList_ReturnHead method for testing Reset method.">
+      <option name="closed" value="true" />
+      <created>1698776947025</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1698776947025</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Added method GetIndexOf_EmptySortedList_ReturnException to MyCollectionGetIndexOfTests.cs">
+      <option name="closed" value="true" />
+      <created>1698777022922</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1698777022923</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Added method Remove_ValueToRemoveIsHead_ReturnTrueAndNewHeadIsNextElement to MyCollectionRemoveTests.cs.">
+      <option name="closed" value="true" />
+      <created>1698777773850</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1698777773850</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Replace return false to return true in Remove and RemoveAll methods.">
+      <option name="closed" value="true" />
+      <created>1698777855692</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1698777855692</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added MyCollectionEventsTests.">
+      <option name="closed" value="true" />
+      <created>1698779131736</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1698779131736</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Update workspace.xml.">
+      <option name="closed" value="true" />
+      <created>1698779150476</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1698779150476</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +536,7 @@
     <option name="coveragePercentColumnWidth" value="53" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="246" />
+    <option name="symbolColumnWidth" value="313" />
     <coverage-tree-state>
       <expand />
       <select />
@@ -565,13 +556,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added Events and output of Count." />
-    <MESSAGE value="Removed unnecessary reference." />
-    <MESSAGE value="Updated report paper." />
-    <MESSAGE value="Removed commented lines." />
-    <MESSAGE value="Update report paper." />
-    <MESSAGE value="Created MyCollectionUnitTests." />
-    <MESSAGE value="Replaced delegated and fixed MoveNext method." />
     <MESSAGE value="Added MyCollectionGetEnumeratorTests." />
     <MESSAGE value="Added global usings." />
     <MESSAGE value="Added MyCollectionAddTests." />
@@ -590,7 +574,14 @@
     <MESSAGE value="Added MyCollectionRemoveAllTests." />
     <MESSAGE value="Renamed Remove_ContainsValueToRemove_ReturnTrueAndUpdatedSortedList to Remove_ContainsValueToRemove_ReturnTrueAndSortedListWithoutFirstMatchedValue method." />
     <MESSAGE value="Added MyCollectionRemoveByIndexTests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MyCollectionRemoveByIndexTests." />
+    <MESSAGE value="Added MyCollectionIsReadOnlyTests." />
+    <MESSAGE value="Renamed myEnumerator to enumerator in GetEnumerator_EmptySortedList_ReturnMoveNextFalseCurrentDefault method;&#10;Added GetEnumerator_ResetInNotEmptySortedList_ReturnHead method for testing Reset method." />
+    <MESSAGE value="Added method GetIndexOf_EmptySortedList_ReturnException to MyCollectionGetIndexOfTests.cs" />
+    <MESSAGE value="Added method Remove_ValueToRemoveIsHead_ReturnTrueAndNewHeadIsNextElement to MyCollectionRemoveTests.cs." />
+    <MESSAGE value="Replace return false to return true in Remove and RemoveAll methods." />
+    <MESSAGE value="Added MyCollectionEventsTests." />
+    <MESSAGE value="Update workspace.xml." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace.xml." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
