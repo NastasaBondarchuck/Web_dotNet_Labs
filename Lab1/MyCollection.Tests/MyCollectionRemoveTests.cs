@@ -20,7 +20,7 @@ public class MyCollectionRemoveTests
         Assert.That(sortedList.Remove(rand.Next(11, 21)), Is.EqualTo(false));
     }
     [Test]
-    public void Remove_ContainsValueToRemove_ReturnTrueAndUpdatedSortedList()
+    public void Remove_ContainsValueToRemove_ReturnTrueAndSortedListWithoutFirstMatchedValue()
     {
         MySortedList<int> sortedList = new MySortedList<int>();
         Random rand = new Random();
