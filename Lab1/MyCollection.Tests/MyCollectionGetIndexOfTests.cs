@@ -38,4 +38,13 @@ public class MyCollectionGetIndexOfTests
         
         Assert.That(sortedList.GetIndexOf(searchedItem), Is.EqualTo(list.IndexOf(searchedItem)));
     }
+
+    [Test]
+    public void GetIndexOf_EmptySortedList_ReturnException()
+    {
+        MySortedList<int> sortedList = new MySortedList<int>();
+        Random rand = new Random();
+
+        Assert.Throws<Exception>(() => sortedList.GetIndexOf(rand.Next(-10, 11)));
+    }
 }
