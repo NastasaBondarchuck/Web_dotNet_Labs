@@ -8,10 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a718cc4-7e0f-4345-b069-962023880522" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCollection/MySortedLIst.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection/MySortedLIst.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCollectionUnitTests/MyCollectionUnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection.Tests/MyCollection.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a6b1457cbcf17db31a383ba49ef9bcc786cf3ef77146d997eee499b27a46d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dd85d1af76a544e1a8083607f687e374b1d8a0/_14c09/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dd85d1af76a544e1a8083607f687e374b1d8a0/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -86,7 +86,7 @@
       <command value="D" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Lab1">
     <configuration name="Lab1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/bin/Debug/net7.0/Lab1.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -123,6 +123,11 @@
       <workItem from="1697004163456" duration="2236000" />
       <workItem from="1697023088850" duration="2642000" />
       <workItem from="1698073232078" duration="3039000" />
+      <workItem from="1698076366555" duration="2509000" />
+      <workItem from="1698591988551" duration="4191000" />
+      <workItem from="1698655085265" duration="604000" />
+      <workItem from="1698687193056" duration="689000" />
+      <workItem from="1698742939133" duration="8215000" />
     </task>
     <task id="LOCAL-00001" summary="Created Main-function.">
       <option name="closed" value="true" />
@@ -372,11 +377,29 @@
       <option name="project" value="LOCAL" />
       <updated>1697023604813</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Created MyCollectionUnitTests.">
+      <option name="closed" value="true" />
+      <created>1698076874821</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1698076874821</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="77" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="210" />
+    <coverage-tree-state>
+      <expand />
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,7 +415,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Implemented CopyTo method; update properties Count and IsReadOnly." />
     <MESSAGE value="Added GetValues method." />
     <MESSAGE value="Added GetByIndex method; renamed field Head to _head, made it private." />
     <MESSAGE value="Added method RemoveByIndex; added one more check to the method GetByIndex." />
@@ -417,6 +439,14 @@
     <MESSAGE value="Updated report paper." />
     <MESSAGE value="Removed commented lines." />
     <MESSAGE value="Update report paper." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update report paper." />
+    <MESSAGE value="Created MyCollectionUnitTests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created MyCollectionUnitTests." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Lab1.MySortedList`1" memberName="_head" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
