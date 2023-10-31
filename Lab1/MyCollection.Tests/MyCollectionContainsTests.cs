@@ -41,6 +41,6 @@ public class MyCollectionContainsTests
             sortedList.Add(item);
         }
 
-        Assert.That(sortedList.Contains(rand.Next(0, 11)), Is.True);
+        Assert.That(sortedList.Contains(rand.Next(1, 11)), Is.True);
     }
 }
