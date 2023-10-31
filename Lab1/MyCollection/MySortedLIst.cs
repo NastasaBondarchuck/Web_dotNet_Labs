@@ -113,7 +113,6 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
     {
         if (array.Length - arrayIndex < Count) throw new IndexOutOfRangeException("SortedList contains more elements than Array might contain!");
         if (arrayIndex < 0) throw new IndexOutOfRangeException("ArrayIndex must not be less than 0!");
-        if (array.Rank != 1) throw new ArgumentException("Array must be one-dimensional!");
         if (Count is 0) return;
         Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
