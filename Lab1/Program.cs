@@ -5,9 +5,6 @@ internal class Program
     {
         MySortedList<int> sortedList = new MySortedList<int>();
         
-        sortedList.CountIncrease += sender => sender.Count++;
-        sortedList.CountDecrease += sender => sender.Count--;
-        
         List<int> list = new List<int> {1, 19, 33, 12, 0, -9, 18};
         
         Print(list, "List with base values:");

@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1", "Lab1.csproj", "{60B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCollection", "MyCollection\MyCollection.csproj", "{B9005A64-2166-4F5A-9F03-A286DF69265E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCollectionUnitTests", "MyCollectionUnitTests\MyCollectionUnitTests.csproj", "{2935D4CA-E1A0-45CC-8922-B1A098D667F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCollection.Tests", "MyCollection.Tests\MyCollection.Tests.csproj", "{2935D4CA-E1A0-45CC-8922-B1A098D667F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

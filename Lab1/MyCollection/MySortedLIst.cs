@@ -7,8 +7,17 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
     public delegate void EventHandler(MySortedList<T> sender);
     public event EventHandler? CountIncrease;
     public event EventHandler? CountDecrease;
+    
     private Node<T>? _head;
+
+    public MySortedList()
+    {
+        CountIncrease += sender => sender.Count++;
+        CountDecrease += sender => sender.Count--;
+    }
+
     public int Count { get; set; }
+
     public bool IsReadOnly => false;
 
     public T[] GetValuesArray()
@@ -201,34 +210,31 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
         object IEnumerator.Current => _current!.Data;
         
         private static Node<T>? _current;
+        private static Node<T>? _next;
         private readonly MySortedList<T> _list;
         private int _counter;
-        
         public MyEnumerator(MySortedList<T> list)
         {
             _list = list;
-            if (_list._head != null) _current = _list._head;
+            if (_list._head != null) _next = _list._head;
             _counter = 0;
         }
-        
         public bool MoveNext()
         {
-            if (_counter >= _list.Count - 1)
+            if (_counter > _list.Count - 1)
             {
                 return false;
             }
-
-            _current = _current!.Next;
+            
+            _current = _next;
             _counter++;
+            _next = _current!.Next;
             return true;
         }
-
         public void Reset()
         {
             _current = _list._head;
         }
-
-
         public void Dispose() { }
     }
     IEnumerator IEnumerable.GetEnumerator()
