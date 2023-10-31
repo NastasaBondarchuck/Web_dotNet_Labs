@@ -39,4 +39,21 @@ public class MyCollectionRemoveTests
         Assert.That(sortedList.Remove(itemToRemove), Is.EqualTo(true));
         Assert.That(sortedList.ToList(), Is.EqualTo(list));
     }
+    
+    [Test]
+    public void Remove_ValueToRemoveIsHead_ReturnTrueAndNewHeadIsNextElement()
+    {
+        MySortedList<int> sortedList = new MySortedList<int>();
+
+        for (int i = 0; i < 10; i++)
+        {
+            int item = 10 - i;
+            sortedList.Add(item);
+        }
+        int itemToRemove = sortedList.GetByIndex(0);
+        int headNext = sortedList.GetByIndex(1);
+        
+        Assert.That(sortedList.Remove(itemToRemove), Is.EqualTo(true));
+        Assert.That(sortedList.GetByIndex(0), Is.EqualTo(headNext));
+    }
 }
