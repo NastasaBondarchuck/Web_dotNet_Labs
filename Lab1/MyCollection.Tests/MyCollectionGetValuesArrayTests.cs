@@ -6,7 +6,7 @@ namespace MyCollection.Tests;
 public class MyCollectionGetValuesArrayTests
 {
     [Test]
-    public void GetValuesArray_NotEmptySortedList_ReturnEmptyArray()
+    public void GetValuesArray_NotEmptySortedList_ReturnEqualToSortedListArray()
     {
         Random rand = new Random();
         MySortedList<int> sortedList = new MySortedList<int>();
