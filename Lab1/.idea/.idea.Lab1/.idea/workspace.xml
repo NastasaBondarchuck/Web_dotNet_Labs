@@ -9,10 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9a718cc4-7e0f-4345-b069-962023880522" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionGetIndexOfTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionGetIndexOfTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionRemoveTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection.Tests/MyCollectionRemoveTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyCollection/MySortedLIst.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection/MySortedLIst.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyCollectionUnitTests/MyCollectionUnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MyCollection.Tests/MyCollection.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,21 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a6b1457cbcf17db31a383ba49ef9bcc786cf3ef77146d997eee499b27a46d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dd85d1af76a544e1a8083607f687e374b1d8a0/_14c09/IEnumerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dd85d1af76a544e1a8083607f687e374b1d8a0/_f2557/ICollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionContainsTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionContainsTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionGetValuesArrayTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection.Tests/MyCollectionRemoveTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/MyCollection/MySortedLIst.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Internet_Explorer/_KPI/web_dotnet/Web_dotNet_Labs/Lab1/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -127,23 +141,7 @@
       <workItem from="1698591988551" duration="4191000" />
       <workItem from="1698655085265" duration="604000" />
       <workItem from="1698687193056" duration="689000" />
-      <workItem from="1698742939133" duration="8215000" />
-    </task>
-    <task id="LOCAL-00001" summary="Created Main-function.">
-      <option name="closed" value="true" />
-      <created>1696235701065</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1696235701065</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Created class Node&lt;T&gt; with comparable T.">
-      <option name="closed" value="true" />
-      <created>1696242507750</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1696242507750</updated>
+      <workItem from="1698742939133" duration="18993000" />
     </task>
     <task id="LOCAL-00003" summary="Started creating class MySortedList, wrote MyEnumerator.">
       <option name="closed" value="true" />
@@ -385,17 +383,169 @@
       <option name="project" value="LOCAL" />
       <updated>1698076874821</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Replaced delegated and fixed MoveNext method.">
+      <option name="closed" value="true" />
+      <created>1698751422707</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751422707</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added MyCollectionGetEnumeratorTests.">
+      <option name="closed" value="true" />
+      <created>1698751485767</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751485767</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added global usings.">
+      <option name="closed" value="true" />
+      <created>1698751521949</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751521949</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added MyCollectionAddTests.">
+      <option name="closed" value="true" />
+      <created>1698751540171</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751540171</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added MyCollectionGetValuesArrayTests.">
+      <option name="closed" value="true" />
+      <created>1698751560085</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751560085</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Automatically update workspace.xml.">
+      <option name="closed" value="true" />
+      <created>1698751614295</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751614295</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Renamed GetValuesArray_NotEmptySortedList_ReturnEmptyArray() to GetValuesArray_NotEmptySortedList_ReturnEqualToSortedListArray() method.">
+      <option name="closed" value="true" />
+      <created>1698751761943</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1698751761943</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added MyCollectionGetValuesListTests.">
+      <option name="closed" value="true" />
+      <created>1698752277847</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1698752277847</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Added MyCollectionGetByIndexTests.">
+      <option name="closed" value="true" />
+      <created>1698753597244</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1698753597244</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added MyCollectionContainsTests.">
+      <option name="closed" value="true" />
+      <created>1698754385401</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1698754385401</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Added MyCollectionGetIndexOfTests.">
+      <option name="closed" value="true" />
+      <created>1698755167534</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1698755167534</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Changed random diapason for assert in GetIndexOf_NotEmptySortedListWithSearchedValue_ReturnTrue method.">
+      <option name="closed" value="true" />
+      <created>1698755225477</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1698755225477</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Added MyCollectionCopyToTests.">
+      <option name="closed" value="true" />
+      <created>1698756536893</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1698756536893</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Removed unnecessary check on dimensional of the array-parameter.">
+      <option name="closed" value="true" />
+      <created>1698756610695</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1698756610695</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added MyCollectionClearTests.">
+      <option name="closed" value="true" />
+      <created>1698757009316</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1698757009316</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added MyCollectionRemoveTests.">
+      <option name="closed" value="true" />
+      <created>1698757559535</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1698757559535</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Added MyCollectionRemoveAllTests.">
+      <option name="closed" value="true" />
+      <created>1698758897325</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1698758897325</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Renamed Remove_ContainsValueToRemove_ReturnTrueAndUpdatedSortedList to Remove_ContainsValueToRemove_ReturnTrueAndSortedListWithoutFirstMatchedValue method.">
+      <option name="closed" value="true" />
+      <created>1698758963821</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1698758963821</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Added MyCollectionRemoveByIndexTests.">
+      <option name="closed" value="true" />
+      <created>1698760019989</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1698760019989</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnitTestsCoverage.Settings">
-    <option name="coveragePercentColumnWidth" value="77" />
+    <option name="coveragePercentColumnWidth" value="53" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="210" />
+    <option name="symbolColumnWidth" value="246" />
     <coverage-tree-state>
       <expand />
       <select />
@@ -415,32 +565,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added GetValues method." />
-    <MESSAGE value="Added GetByIndex method; renamed field Head to _head, made it private." />
-    <MESSAGE value="Added method RemoveByIndex; added one more check to the method GetByIndex." />
-    <MESSAGE value="Addedc checking on Count is 0 in methods CopyTo and Contains." />
-    <MESSAGE value="Rename GetValues to GetValuesArray; added method GetValuesList." />
-    <MESSAGE value="Added method GetIndexOf." />
-    <MESSAGE value="Corrected mistakes in Add (corrected head remapping)&#10; and FindPlace (changed descending list to ascending) methods." />
-    <MESSAGE value="Corrected mistakes in the class MyEnumerator." />
-    <MESSAGE value="Correct mistake in method RemoveByIndex." />
-    <MESSAGE value="Added RemoveAll method." />
-    <MESSAGE value="Removed unnecessary base interface IEnumerable&lt;T&gt;." />
-    <MESSAGE value="Removed unnecessary imported type." />
-    <MESSAGE value="Added testing created class and it's methods with int-values." />
-    <MESSAGE value="Removed nullable for IEnumerator.Current." />
-    <MESSAGE value="Removed unnecessary using-directive" />
-    <MESSAGE value="Made Print methods private." />
-    <MESSAGE value="Moved created classes to Class Library." />
-    <MESSAGE value="Added reference to MyCollection in references of Lab1 project." />
-    <MESSAGE value="Added delegates and updated MoveNext method." />
     <MESSAGE value="Added Events and output of Count." />
     <MESSAGE value="Removed unnecessary reference." />
     <MESSAGE value="Updated report paper." />
     <MESSAGE value="Removed commented lines." />
     <MESSAGE value="Update report paper." />
     <MESSAGE value="Created MyCollectionUnitTests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created MyCollectionUnitTests." />
+    <MESSAGE value="Replaced delegated and fixed MoveNext method." />
+    <MESSAGE value="Added MyCollectionGetEnumeratorTests." />
+    <MESSAGE value="Added global usings." />
+    <MESSAGE value="Added MyCollectionAddTests." />
+    <MESSAGE value="Added MyCollectionGetValuesArrayTests." />
+    <MESSAGE value="Automatically update workspace.xml." />
+    <MESSAGE value="Renamed GetValuesArray_NotEmptySortedList_ReturnEmptyArray() to GetValuesArray_NotEmptySortedList_ReturnEqualToSortedListArray() method." />
+    <MESSAGE value="Added MyCollectionGetValuesListTests." />
+    <MESSAGE value="Added MyCollectionGetByIndexTests." />
+    <MESSAGE value="Added MyCollectionContainsTests." />
+    <MESSAGE value="Added MyCollectionGetIndexOfTests." />
+    <MESSAGE value="Changed random diapason for assert in GetIndexOf_NotEmptySortedListWithSearchedValue_ReturnTrue method." />
+    <MESSAGE value="Added MyCollectionCopyToTests." />
+    <MESSAGE value="Removed unnecessary check on dimensional of the array-parameter." />
+    <MESSAGE value="Added MyCollectionClearTests." />
+    <MESSAGE value="Added MyCollectionRemoveTests." />
+    <MESSAGE value="Added MyCollectionRemoveAllTests." />
+    <MESSAGE value="Renamed Remove_ContainsValueToRemove_ReturnTrueAndUpdatedSortedList to Remove_ContainsValueToRemove_ReturnTrueAndSortedListWithoutFirstMatchedValue method." />
+    <MESSAGE value="Added MyCollectionRemoveByIndexTests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MyCollectionRemoveByIndexTests." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
