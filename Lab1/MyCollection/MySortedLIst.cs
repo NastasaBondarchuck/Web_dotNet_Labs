@@ -146,7 +146,6 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
         Node<T>? previous = null;
         Node<T>? current = _head;
         for (int i = 0; i < Count; i++)
-                
         {
             if (current!.Data.Equals(item))
             {
@@ -158,13 +157,13 @@ public class MySortedList<T> : ICollection<T> where T : IComparable
             current = current.Next;
         }
 
-        return false;
+        return true;
     }
     public bool RemoveAll(T item)
     {
         if (!Contains(item)) return false;
         while (Contains(item)) Remove(item);
-        return false;
+        return true;
     }
     public bool RemoveByIndex(int index)
     {
