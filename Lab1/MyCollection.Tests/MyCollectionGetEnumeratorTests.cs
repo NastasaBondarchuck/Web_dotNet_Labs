@@ -10,8 +10,8 @@ public class MyCollectionGetEnumeratorTests
     {
         MySortedList<int> sortedList = new MySortedList<int>();
         
-        using var myEnumerator = sortedList.GetEnumerator();
-        var resultMoveNext = myEnumerator.MoveNext();
+        using var enumerator = sortedList.GetEnumerator();
+        var resultMoveNext = enumerator.MoveNext();
         
         Assert.That(resultMoveNext, Is.False);
     }
@@ -31,5 +31,19 @@ public class MyCollectionGetEnumeratorTests
         foreach (var item in sortedList) list.Add(item);
         
         Assert.That(sortedList.ToList(), Is.EqualTo(list));
+    }
+
+    [Test]
+    public void GetEnumerator_ResetInNotEmptySortedList_ReturnHead()
+    {
+        Random rand = new Random();
+        MySortedList<int> sortedList = new MySortedList<int>();
+        
+        sortedList.Add(rand.Next(-10, 11));
+        using var enumerator = sortedList.GetEnumerator();
+        enumerator.MoveNext();
+        enumerator.Reset();
+        
+        Assert.That(sortedList.GetByIndex(0), Is.EqualTo(enumerator.Current));
     }
 }
