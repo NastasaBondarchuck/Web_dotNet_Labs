@@ -18,6 +18,7 @@ public class MyCollectionAddTests
             list.Add(item);
             sortedList.Add(item);
         }
+        
         list.Sort();
         
         Assert.That(sortedList.ToList(), Is.EqualTo(list));
